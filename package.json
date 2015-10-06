@@ -1,0 +1,18 @@
+{
+  "name": "virtual-device-wall",
+  "version": "1.0.0",
+  "description": "A Virtual Device wall to test Cordova apps",
+  "main": "lib/index.js",
+  "bin": {
+    "wall": "lib/cli.js"
+  },
+  "author": "Parashuram <code@nparashuram.com>",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.9.10",
+    "cheerio": "^0.19.0",
+    "commander": "^2.8.1",
+    "debug": "^2.2.0",
+    "q": "^1.4.1"
+  }
+}
