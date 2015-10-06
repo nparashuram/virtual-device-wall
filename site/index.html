@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Virtual Device Wall</title>
+    <style>
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    
+    body {
+        height: 100%;
+        width: 100%;
+        background: #e9dfc4;
+        background: -moz-linear-gradient(left, #e9dfc4 0%, #e9dfc4 1%, #ede3c8 2%, #ede3c8 24%, #ebddc3 25%, #e9dfc4 48%, #ebddc3 49%, #e6d8bd 52%, #e6d8bd 53%, #e9dbc0 54%, #e6d8bd 55%, #e6d8bd 56%, #e9dbc0 57%, #e6d8bd 58%, #e6d8bd 73%, #e9dbc0 74%, #e9dbc0 98%, #ebddc3 100%);
+        background: -webkit-gradient(linear, left top, right top, color-stop(0%, #e9dfc4), color-stop(1%, #e9dfc4), color-stop(2%, #ede3c8), color-stop(24%, #ede3c8), color-stop(25%, #ebddc3), color-stop(48%, #e9dfc4), color-stop(49%, #ebddc3), color-stop(52%, #e6d8bd), color-stop(53%, #e6d8bd), color-stop(54%, #e9dbc0), color-stop(55%, #e6d8bd), color-stop(56%, #e6d8bd), color-stop(57%, #e9dbc0), color-stop(58%, #e6d8bd), color-stop(73%, #e6d8bd), color-stop(74%, #e9dbc0), color-stop(98%, #e9dbc0), color-stop(100%, #ebddc3));
+        background: -webkit-linear-gradient(left, #e9dfc4 0%, #e9dfc4 1%, #ede3c8 2%, #ede3c8 24%, #ebddc3 25%, #e9dfc4 48%, #ebddc3 49%, #e6d8bd 52%, #e6d8bd 53%, #e9dbc0 54%, #e6d8bd 55%, #e6d8bd 56%, #e9dbc0 57%, #e6d8bd 58%, #e6d8bd 73%, #e9dbc0 74%, #e9dbc0 98%, #ebddc3 100%);
+        background: -o-linear-gradient(left, #e9dfc4 0%, #e9dfc4 1%, #ede3c8 2%, #ede3c8 24%, #ebddc3 25%, #e9dfc4 48%, #ebddc3 49%, #e6d8bd 52%, #e6d8bd 53%, #e9dbc0 54%, #e6d8bd 55%, #e6d8bd 56%, #e9dbc0 57%, #e6d8bd 58%, #e6d8bd 73%, #e9dbc0 74%, #e9dbc0 98%, #ebddc3 100%);
+        background: -ms-linear-gradient(left, #e9dfc4 0%, #e9dfc4 1%, #ede3c8 2%, #ede3c8 24%, #ebddc3 25%, #e9dfc4 48%, #ebddc3 49%, #e6d8bd 52%, #e6d8bd 53%, #e9dbc0 54%, #e6d8bd 55%, #e6d8bd 56%, #e9dbc0 57%, #e6d8bd 58%, #e6d8bd 73%, #e9dbc0 74%, #e9dbc0 98%, #ebddc3 100%);
+        background: linear-gradient(to right, #e9dfc4 0%, #e9dfc4 1%, #ede3c8 2%, #ede3c8 24%, #ebddc3 25%, #e9dfc4 48%, #ebddc3 49%, #e6d8bd 52%, #e6d8bd 53%, #e9dbc0 54%, #e6d8bd 55%, #e6d8bd 56%, #e9dbc0 57%, #e6d8bd 58%, #e6d8bd 73%, #e9dbc0 74%, #e9dbc0 98%, #ebddc3 100%);
+        background-size: 120px;
+        background-repeat: repeat;
+    }
+    
+    .grid {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+        flex-wrap: wrap;
+    }
+    
+    .phone {
+        margin: 1em;
+        overflow: visible;
+    }
+    
+    .spinner {
+        width: 40px;
+        height: 40px;
+        background-color: #333;
+        margin: 100px auto;
+        -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+        animation: sk-rotateplane 1.2s infinite ease-in-out;
+    }
+    
+    @-webkit-keyframes sk-rotateplane {
+        0% {
+            -webkit-transform: perspective(120px)
+        }
+        50% {
+            -webkit-transform: perspective(120px) rotateY(180deg)
+        }
+        100% {
+            -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg)
+        }
+    }
+    
+    @keyframes sk-rotateplane {
+        0% {
+            transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+            -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+        }
+        50% {
+            transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+            -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+        }
+        100% {
+            transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+            -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        }
+    }
+    
+    .grid .outline {
+        border: SOLID 1px #000;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 0 30px 0px #000 inset;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+    
+    h1,
+    h3 {
+        margin: 0;
+        text-align: center;
+        font-family: 'Helvetica Nue', 'Helvetica', 'Verdana';
+    }
+    </style>
+</head>
+
+<body>
+    <h1>Virtual Device Wall</h1>
+    <div class="grid">
+        <div>
+            <div class="phone" data-phone="ipadair">
+            </div>
+            <h3>iPad Air</h3>
+        </div>
+        <div>
+            <div class="phone" data-phone="iphone4s">
+            </div>
+            <h3>iPhone 4s</h3>
+        </div>
+        <div>
+            <div class="phone" data-phone="nexus5">
+            </div>
+            <h3>Nexus 5</h3>
+        </div>
+        <div>
+            <div class="phone" data-phone="nexus7">
+            </div>
+            <h3>Nexus 7</h3>
+        </div>
+    </div>
+    <script>
+    var KEYS = __KEYS__;
+    </script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>
+    var SCALE = 2;
+
+    var dim = {
+        iphone4s: {
+            width: 370,
+            height: 744
+        },
+        iphone5s: {
+            width: 365,
+            height: 782
+        },
+        iphone6: {
+            width: 416,
+            height: 870
+        },
+        iphone6plus: {
+            width: 690,
+            height: 1420
+        },
+        ipadair: {
+            width: 864,
+            height: 1287
+        },
+        nexus5: {
+            width: 400,
+            height: 795
+        },
+        nexus7: {
+            width: 728,
+            height: 1268
+        },
+        nexus9: {
+            width: 866,
+            height: 1288
+        }
+    };
+
+    var phones = $('.phone');
+
+    phones.each(function(i, el) {
+        var $el = $(el);
+        var type = $el.data('phone');
+        $el.css({
+            height: dim[type].height / SCALE,
+            width: dim[type].width / SCALE
+        }).append('<div class="outline"><div class="spinner"></div></div>')
+    });
+
+    (function loadPhone(i) {
+
+        setTimeout(function() {
+            var $el = $(phones[i]).empty();
+            var type = $el.data('phone');
+            var platform = type.indexOf('nexus') === 0 ? 'android' : 'ios';
+            var iframe = $('<iframe>', {
+                width: '100%',
+                height: '100%',
+                frameborder: 0,
+                scrolling: 'no',
+                src: ['https://appetize.io/embed/', KEYS[platform], '?', $.param({
+                    device: type,
+                    scale: 100 / SCALE,
+                    autoplay: true,
+                    orientation: 'portrait',
+                    deviceColor: 'black'
+                })].join('')
+            }).appendTo($el);
+
+            if (i < phones.length - 1) {
+                loadPhone(i + 1);
+            }
+        }, 3000);
+    }(0));
+    </script>
+</body>
+
+</html>

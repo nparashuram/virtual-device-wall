@@ -1,0 +1,33 @@
+{
+  "name": "virtual-device-wall",
+  "version": "0.0.1",
+  "description": "A Virtual Device wall to test Cordova apps",
+  "main": "lib/index.js",
+  "bin": {
+    "wall": "lib/cli.js"
+  },
+  "scripts": {
+    "install": "npm link cordova"
+  },
+  "author": "Parashuram <code@nparashuram.com>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "archiver": "^0.16.0",
+    "commander": "^2.9.0",
+    "cordova-plugin-browsersync": "^0.1.3",
+    "debug": "^2.2.0",
+    "glob": "^5.0.15",
+    "ngrok": "0.1.99",
+    "q": "^1.4.1",
+    "request": "^2.65.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nparashuram/virtual-device-wall.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nparashuram/virtual-device-wall/issues"
+  },
+  "homepage": "https://github.com/nparashuram/virtual-device-wall#readme"
+}
