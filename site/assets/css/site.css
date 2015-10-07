@@ -1,0 +1,58 @@
+/* global */
+.site-global {
+	background-color: #364C63;
+	color: #FFFFFF;
+}
+
+
+/* header */
+.header .site-menu {
+	background-color: #2d3e50;
+}
+
+.header .pure-menu-heading {
+	color: #FFFFFF;
+}
+
+.header .site-settings-menu {
+	float: right;
+}
+
+.site-modal {
+	color: black;
+}
+
+.site-modal-button {
+	margin-right: 1em;
+}
+
+.btn-group .button-selected {
+	background: rgb(28, 184, 65);
+	color: white;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.btn-group .pure-button {
+	margin-bottom: 5px;
+}
+
+
+/*.global-apikey-container {
+	float: right;
+	padding: .3em;
+}
+
+.global-apikey-container input {
+	height: 1.1em;
+}*/
+
+
+/* contents */
+.site-content {
+	min-height: 1080px;	
+}
+
+.device-container {
+	margin: 50px;
+}
+
