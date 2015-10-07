@@ -11,6 +11,7 @@ The virtual wall is powerd by [Appetize](https://appetize.io/) and [Browser-sync
 2. Install the tool using `npm install virtual-device-wall`
 3. Run `node_modules/.bin/wall --appetize=APPETIZE_KEY`. 
 4. Open the URL displayed on a large screen (preferably a television or a projector !!). 
+5. If you had a device connected, you can use that device as a remote for mirroring gestures on your device wall. 
 
 ## How it works
 
