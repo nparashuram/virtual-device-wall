@@ -4,9 +4,136 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Virtual Device Wall</title>
-	<link rel="stylesheet" href="">
+	<link rel="stylesheet" href="./assets/css/pure-min.css">
+	<link rel="stylesheet" href="./assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./assets/css/site.css">
 </head>
-<body>
+<body class="site-global">
+	<div class="header">
+		<div class="site-menu pure-menu pure-menu-horizontal">
+			<a href="#" class="pure-menu-heading">Virtual Device Wall</a>
+			<ul class="pure-menu-list">
+				<li class="pure-menu-item">
+					<a href="#" class="pure-menu-link pure-menu-selected" data-target="#addDeviceContainer" data-toggle="modal"><i class="fa fa-plus"></i></a>
+				</li>
+			</ul>			
+			<ul class="pure-menu-list site-settings-menu">
+				<li class="pure-menu-item"><a href="#" class="pure-menu-link" data-target="#settings" data-toggle="modal"><i class="fa fa-cog"></i></a></li>
+			</ul>
+		</div>
+	</div>
+	
+	
+	<div class="site-content">
+		<!--this is where content goes-->
+	</div>
+	
+	
+	<div id="addDeviceContainer" class="modal fade site-modal" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div class="options pure-g">
+					<div class="btn-group pure-u-24-24" data-model="device">
+						<h3>Device</h3>
+						<button class="pure-button"  data-value="iphone4s">iPhone 4S</button>
+						<button class="pure-button button-selected"  data-value="iphone5s">iPhone 5S</button>
+						<button class="pure-button"  data-value="iphone6">iPhone 6</button>
+						<button class="pure-button"  data-value="iphone6plus">iPhone 6+</button>
+						<button class="pure-button"  data-value="ipadair">iPad Air</button>
+						<br>
+						<button class="pure-button"  data-value="nexus5">Nexus 5</button>
+						<button class="pure-button"  data-value="nexus7">Nexus 7</button>
+						<button class="pure-button"  data-value="nexus9">Nexus 9</button>
+					</div>
+					
+					<div class="btn-group pure-u-12-24" data-model="scale">
+						<h3>Scale</h3>
+						<button class="pure-button"  data-value="25">25%</button>
+						<button class="pure-button"  data-value="50">50%</button>
+						<button class="pure-button"  data-value="75">75%</button>
+						<button class="pure-button button-selected"  data-value="100">100%</button>
+					</div>
+					
+					<div class="btn-group pure-u-12-24" data-model="autoplay">
+						<h3>Play option</h3>
+						<button class="pure-button"  data-value="true">Autoplay</button>
+						<button class="pure-button button-selected"  data-value="false">Tap to play</button>
+					</div>
+				
+					<div class="btn-group pure-u-12-24" data-model="orientation">
+						<h3>Orientation</h3>
+						<button class="pure-button button-selected"  data-value="portrait">Portrait</button>
+						<button class="pure-button"  data-value="landscape">Landscape</button>
+					</div>
+				
+					<div class="btn-group pure-u-12-24" data-model="deviceColor">
+						<h3>Device Color</h3>
+						<button class="pure-button"  data-value="black">Black</button>
+						<button class="pure-button button-selected"  data-value="white">White</button>
+					</div>
+					
+					<div class="btn-group pure-u-12-24" data-model="screenOnly">
+						<h3>Device Chrome</h3>
+						<button class="pure-button"  data-value="true">Screen only</button>
+						<button class="pure-button button-selected"  data-value="false">Show device</button>
+					</div>
+	
+					<div class="btn-group pure-u-12-24" data-model="xdocMsg">
+						<h3>Cross-document messaging</h3>
+						<button class="pure-button"  data-value="true">Enabled</button>
+						<button class="pure-button button-selected"  data-value="false">Disabled</button>
+					</div>
+				
+					<div class="btn-group pure-u-24-24" data-model="language">
+						<h3>Language</h3>
+						<button class="pure-button button-selected"  data-value="default">default</button>
+						<button class="pure-button"  data-value="de">de</button>
+						<button class="pure-button"  data-value="en">en</button>
+						<button class="pure-button"  data-value="it">it</button>
+						<button class="pure-button"  data-value="ja">ja</button>
+						<button class="pure-button"  data-value="ko">ko</button>
+						<button class="pure-button"  data-value="pt">pt</button>
+						<button class="pure-button"  data-value="ru">ru</button>
+					</div>
+					
+				</div>
+				<hr>
+				<div>			
+					<button class="pure-button pure-button-primary site-modal-button" xdata-dismiss="modal" id="addDevice">Add Device</button>
+					<button class="pure-button site-modal-button" data-dismiss="modal">Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+
+
+<!--<div id="settings" class="modal fade site-modal" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 id="myModalLabel">A Functional Bootstrap + Pure Modal</h1>
+      </div>
+
+      <div class="modal-body">
+        <p>To create the modal you just need to include the <code>modal.css</code> and <code>modal.js</code> file from Bootstrap. Pure will take care of all low level styling. The result is a fully-functional Modal using just a fraction of the CSS.</p>
+     </div>
+
+      <div class="modal-footer">
+        <button type="button" class="pure-button"
+                id="success-button" data-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>-->
+
+	
+	
+	
 	<h1>TODO</h1>
 	<p>
 		This is the page that acts as a Virtual Device wall. It is served from the local machine and embeds Appetize images using iFrame like this - <a href="https://appetize.io/embed">https://appetize.io/embed</a>.
@@ -18,5 +145,12 @@
 		User should be able to create add new devices, remove devices, etc.
 		Each device should be stored in local storage so that when the page loads, all devices are reloaded. 
 	</p>
+	
+	<script src="assets/js/jquery-2.1.4.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/masonry.pkgd.min.js"></script>
+	<script src="assets/js/app.constants.js"></script>
+	<script src="assets/js/app.main.js"></script>
+	
 </body>
 </html>
