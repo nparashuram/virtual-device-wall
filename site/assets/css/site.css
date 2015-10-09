@@ -4,6 +4,8 @@
 	color: #FFFFFF;
 }
 
+.close-btn { position: absolute; top: 0; right: 0; z-index: 99; }
+
 
 /* header */
 .header .site-menu {
@@ -53,6 +55,6 @@
 }
 
 .device-container {
-	margin: 50px;
+	margin: 10px;
 }
 
