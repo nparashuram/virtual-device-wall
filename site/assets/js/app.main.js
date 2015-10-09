@@ -37,9 +37,7 @@ function appendIframe (settings) {
     var $items = generateIframe(settings);
     
     // append items to grid
-    $deviceContainer.append( $items ).on('load', function () {
-        console.log("aaaaaa" + this);
-    });
+    $deviceContainer.append( $items ).masonry( 'appended', $items );;
 }
 
 function generateIframe (settings) {
