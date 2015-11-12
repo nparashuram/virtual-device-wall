@@ -1,6 +1,6 @@
 {
   "name": "virtual-device-wall",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Virtual Device wall to test Cordova apps",
   "main": "lib/index.js",
   "bin": {
